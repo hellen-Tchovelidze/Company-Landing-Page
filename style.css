@@ -1,1 +1,246 @@
-/* good */
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  transition: ease-in-out;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./images/Rectangle (2).png");
+  background-repeat: no-repeat;
+  background-size: 360px 750px;
+  background-position: top right;
+  gap: 30px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1140px;
+  width: 100%;
+  padding: 30px;
+  
+}
+
+.header_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 10%;
+}
+.CMP {
+  font-family: Hind Siliguri;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -1px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #333333;
+}
+
+.header_container a {
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #333333;
+  text-decoration: none;
+}
+
+#CMP {
+  font-family: Hind Siliguri;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -1px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #333333;
+}
+
+.btn_contact {
+  width: 138px;
+  height: 48px;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 1px solid #f075663c;
+  font-family: Hind Siliguri;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25.87px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #f07566;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1140px;
+  width: 100%;
+}
+.ul_header {
+  font-family: Hind Siliguri;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 1px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #f07566;
+}
+
+.photo_div {
+  position: relative;
+}
+.yellow_div {
+  width: 462px;
+  height: 480px;
+  background-color: #fbd34b;
+  border-top-left-radius: 100px;
+}
+
+.img_grap {
+  position: absolute;
+  width: 216px;
+  height: 128px;
+  top: 400px;
+  left: -60px;
+  z-index: 4;
+}
+
+.img_rectangle {
+  width: 132px;
+  height: 184px;
+  top: 160px;
+  left: 370px;
+  position: absolute;
+  z-index: -1;
+}
+
+.icone_speack {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 100px;
+  left: -60px;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+}
+.section_creative_tex_container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.section_creative_heading {
+  font-family: Hind Siliguri;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: -1px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #333333;
+}
+
+.green_tex {
+  color: #4db282;
+}
+
+.section_creative_paragraph {
+  font-family: Work Sans;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #333333;
+}
+
+.section_creative_btn {
+  border: none;
+  border-radius: 6px;
+  width: 154px;
+  height: 48px;
+  background-color: #f07566;
+  font-family: Hind Siliguri;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25.87px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #fff;
+}
+
+.grey_div {
+  width: 520px;
+  height: 448px;
+  background-color: #d8d8d8;
+  
+ border-radius: 8px;
+ border-top-right-radius: 100px;
+}
+
+.icone_beg {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 80px;
+  left: -60px;
+}
+
+.yellow_cont {
+  width: 482px;
+  height: 326px;
+  top: 140px;
+  left: -20px;
+  position: absolute;
+  z-index: -2;
+}
+
+
+.orange_cont{
+    width: 132px;
+height: 160px;
+top: 320px;
+left: -35px;
+position: absolute;
+z-index: -1;
+}
+
+.done_icone{
+    width: 128px;
+height: 128px;
+top: 390px;
+left: 425px;
+position: absolute;
+}
