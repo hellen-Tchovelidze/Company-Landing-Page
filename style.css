@@ -248,6 +248,7 @@ section {
 .sec_about_heading {
   font-family: Hind Siliguri;
 
+
 .review-container {
   width: 100%;
   display: flex;
@@ -301,6 +302,7 @@ section {
   font-weight: 700;
   line-height: 64px;
   letter-spacing: -1px;
+
 
   text-align: left;
   text-underline-position: from-font;
@@ -610,6 +612,7 @@ section {
 }
 
 
+
 .sec_features_heading {
   font-family: Hind Siliguri;
   font-size: 56px;
@@ -718,6 +721,7 @@ border-radius: 8px 0px 0px 0px;
 
 }
 
+
 .insight_box1 {
   width: 1170px;
   height: 368px;
@@ -820,6 +824,7 @@ border-radius: 8px 0px 0px 0px;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
 footer {
   width: 100%;
   height: 528px;
@@ -885,5 +890,48 @@ footer {
 .terms_policy {
   display: flex;
   gap: 67px;
+}
+
+.grey_div {
+  width: 520px;
+  height: 448px;
+  background-color: #d8d8d8;
+
+  border-radius: 8px;
+  border-top-right-radius: 100px;
+}
+
+.icone_beg {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 80px;
+  left: -60px;
+}
+
+.yellow_cont {
+  width: 482px;
+  height: 326px;
+  top: 140px;
+  left: -20px;
+  position: absolute;
+  z-index: -2;
+}
+
+.orange_cont {
+  width: 132px;
+  height: 160px;
+  top: 320px;
+  left: -35px;
+  position: absolute;
+  z-index: -1;
+}
+
+.done_icone {
+  width: 128px;
+  height: 128px;
+  top: 390px;
+  left: 425px;
+  position: absolute;
 }
 
