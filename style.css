@@ -244,12 +244,64 @@ section {
   position: absolute;
 }
 
+
 .sec_about_heading {
   font-family: Hind Siliguri;
+
+.review-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 227px;
+  align-items: end;
+}
+.review_yellow_background {
+  width: 520px;
+  height: 326px;
+  border-radius: 12px;
+  background: #fbd34b;
+  position: relative;
+}
+.review_red_background {
+  width: 132px;
+  height: 160px;
+  border-radius: 8px;
+  background: #f07566;
+  position: absolute;
+  top: 179px;
+  right: 402px;
+}
+.review_icon {
+  position: absolute;
+  bottom: 280px;
+  right: 430px;
+}
+.review_photo {
+  width: 520px;
+  height: 448px;
+  border-radius: 8px 100px 8px 8px;
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+}
+.review_box2 {
+  display: flex;
+  flex-direction: column;
+}
+.review_tittle {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.review_heading {
+  color: #333;
+  font-family: "Hind Siliguri";
+
   font-size: 56px;
   font-weight: 700;
   line-height: 64px;
   letter-spacing: -1px;
+
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
@@ -339,12 +391,224 @@ section {
 
 .sec_list_paragraph {
   color: rgba(51, 51, 51, 0.5);
+
+}
+.costumer_review {
+  width: 470px;
+  height: 224px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 24px 48px 0px rgba(0, 17, 86, 0.08);
+  position: relative;
+}
+.review_info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 27px;
+  margin-left: 32px;
+  gap: 14px;
+}
+.review_paragraph {
+  width: 406px;
+  height: 96px;
+  color: rgba(51, 51, 51, 0.5);
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+}
+.customer_name {
+  color: #333;
+  font-family: "Hind Siliguri";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+.microsoft_span {
+  color: rgba(51, 51, 51, 0.5);
+  font-family: "Work Sans";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.tear_icon {
+  left: 362px;
+  top: -18px;
+  position: absolute;
+}
+.change_icons {
+  display: flex;
+  gap: 8px;
+  margin-top: 48px;
+}
+.move_left {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f07566;
+  border-radius: 50%;
+}
+.move_right {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f07566;
+  border-radius: 50%;
+}
+.project_info {
+  width: 1170px;
+  height: 448px;
+  border-radius: 8px;
+  background: #f07566;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1140px;
+  width: 100%;
+  padding: 30px;
+  margin-top: 240px;
+  display: flex;
+  justify-content: center;
+  gap: 240px;
+  position: relative;
+}
+
+.header_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+.contact_box {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  margin-top: 79px;
+}
+.kickstart {
+  color: #fff;
+  font-family: "Hind Siliguri";
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: -1px;
+}
+.contact {
+  width: 170px;
+  height: 48px;
+  border-radius: 6px;
+  background: #fbd34b;
+  color: #333;
+  text-align: center;
+  font-family: "Hind Siliguri";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 0;
+}
+.project_paragraph {
+  width: 470px;
+  height: 133px;
+  color: #fff;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  margin-top: 79px;
+}
+.line_icon {
+  bottom: -28px;
+  left: 452px;
+  position: absolute;
+}
+.neswtaller_box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 108px;
+}
+.neswtaller_heading {
+  color: #333;
+  font-family: "Hind Siliguri";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -1px;
+}
+.email {
+  display: flex;
+  gap: 30px;
+}
+#email {
+  width: 286px;
+  height: 48px;
+  border-radius: 6px;
+  border: 1px solid #dadada;
+  background: #fff;
+}
+#subscribe_button {
+  width: 154px;
+  height: 48px;
+  border-radius: 6px;
+  background: #f07566;
+  color: #fff;
+  text-align: center;
+  font-family: "Hind Siliguri";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 0;
+}
+.insights_tittle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  margin-top: 171px;
+}
+.article {
+  color: #f07566;
+  font-family: "Hind Siliguri";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.insights_heading {
+  color: #333;
+  text-align: center;
+  font-family: "Hind Siliguri";
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: -1px;
+}
+.insights_paragraph {
+  width: 770px;
+  height: 72px;
+  color: rgba(51, 51, 51, 0.5);
+  text-align: center;
+
   font-family: "Work Sans";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 32px;
 }
+
 
 .sec_features_heading {
   font-family: Hind Siliguri;
@@ -453,3 +717,173 @@ border-radius: 8px 0px 0px 0px;
 
 
 }
+
+.insight_box1 {
+  width: 1170px;
+  height: 368px;
+  border-radius: 8px;
+  border: 1px solid #e6edf5;
+  background: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 45px;
+  display: flex;
+  align-items: center;
+  gap: 66px;
+}
+.insight_photo1 {
+  width: 554px;
+  height: 336px;
+  border-radius: 8px 8px 50px 8px;
+  margin-left: 16px;
+}
+.insight1_text {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+}
+.insight1_heading {
+  color: #333;
+  font-family: "Hind Siliguri";
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -1px;
+}
+.insight1_paragraph {
+  color: #333;
+  font-family: "Work Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+.insight_container1 {
+  /* margin-left: auto;
+  margin-right: auto; */
+  display: flex;
+  margin-top: 32px;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.insight_box2 {
+  width: 370px;
+  height: 384px;
+  border-radius: 8px;
+  border: 1px solid #e6edf5;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-direction: column;
+}
+.insight_photo2 {
+  width: 338px;
+  height: 240px;
+  border-radius: 8px 8px 50px 8px;
+}
+.insight_paragraph {
+  width: 306px;
+  color: #333;
+  font-family: "Hind Siliguri";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+.section_insight_container2 {
+  display: none;
+  transition: ease-in-out;
+}
+
+.section_button {
+  margin-top: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#browseall {
+  width: 170px;
+  height: 48px;
+  border-radius: 6px;
+  border: 1px solid rgba(240, 117, 102, 0.24);
+  color: #f07566;
+  text-align: center;
+  font-family: "Hind Siliguri";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+footer {
+  width: 100%;
+  height: 528px;
+  background-color: #3f3836;
+  margin-top: 200px;
+}
+.footer_container1 {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 76px;
+}
+.cmp {
+  color: #fff;
+}
+.red_paragraph {
+  color: #f07566;
+  font-family: "Hind Siliguri";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.footer_paragraph_lower {
+  color: #fff;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+.list_container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.hr_box {
+  width: 1170px;
+  height: 1px;
+  background: #494949;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 69px;
+}
+.footer_container2 {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 800px;
+  margin-top: 58px;
+}
+.copyright {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+.terms_policy {
+  display: flex;
+  gap: 67px;
+}
+
