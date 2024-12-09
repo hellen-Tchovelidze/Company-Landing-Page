@@ -859,7 +859,7 @@ section {
   padding: 15px;
 }
 
-.section_button {
+.sec_button {
   display: flex;
   justify-content: center;
   align-items: center;
