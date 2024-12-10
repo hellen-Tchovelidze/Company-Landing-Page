@@ -9,11 +9,13 @@ let customer_name = document.getElementById("customer_name");
 let microsoft_span = document.getElementById("microsoft_span");
 
 // Email vallidation
-subscribe_button.addEventListener("click", () => {
+subscribe_button.addEventListener("click", (event) => {
+  event.preventDefault();
   let email_value = email.value;
-  let email_vallidation = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-  if (email_vallidation.test(email_value)) {
+  let email_validation = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  if (email_validation.test(email_value)) {
     alert("Email is correct");
+    email.remove();
   } else {
     alert("Email is not correct");
   }
@@ -34,48 +36,14 @@ browseall.addEventListener("click", () => {
   }
 });
 
-// use fakestoreapi
+// make slider
 
-let currentIndex = 0;
-let reviews = [];
-async function fetchReviews() {
-  try {
-    let response = await fetch("https://fakestoreapi.com/products");
-    let products = await response.json();
-    reviews = products;
-    updateReview(currentIndex);
-  } catch (error) {
-    console.error("Error", error);
-  }
-}
-
-function updateReview(index) {
-  if (reviews.length > 0) {
-    const product = reviews[index];
-
-    let description =
-      product.description.split(" ").slice(0, 10).join(" ") + "...";
-    review_paragraph.textContent = description;
-
-    let title = product.title.split(" ").slice(0, 3).join(" ");
-    customer_name.textContent = title;
-
-    microsoft_span.textContent = "$" + product.price;
-  }
-}
-
-move_left.addEventListener("click", () => {
-  if (reviews.length) {
-    currentIndex = (currentIndex - 1 + reviews.length) % reviews.length;
-    updateReview(currentIndex);
-  }
+document.addEventListener("DOMContentLoaded", function () {
+  var swiper = new Swiper(".mySwiper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    loop: true,
+  });
 });
-
-move_right.addEventListener("click", () => {
-  if (reviews.length) {
-    currentIndex = (currentIndex + 1) % reviews.length;
-    updateReview(currentIndex);
-  }
-});
-
-fetchReviews();
