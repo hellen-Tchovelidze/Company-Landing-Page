@@ -559,7 +559,7 @@ section {
   color: #333333;
 }
 
-.costumer_review {
+/* .costumer_review {
   width: 470px;
   height: 224px;
   border-radius: 8px;
@@ -624,7 +624,57 @@ section {
   align-items: center;
   background-color: #f07566;
   border-radius: 50%;
+} */
+
+.swiper {
+  width: 470px;
+  height: 224px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 24px 48px 0px rgba(0, 17, 86, 0.08);
+  position: relative;
 }
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex !important;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #f07566 !important;
+}
+
+.product-description {
+  font-size: 16px;
+  color: #333;
+}
+
+.product-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #555;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #f07566;
+}
+
+/*  */
 .project_info {
   width: 1170px;
   height: 448px;
@@ -735,6 +785,7 @@ section {
   letter-spacing: 1px;
   text-transform: uppercase;
   border: 0;
+  cursor: pointer;
 }
 
 .sectio_insighttittle {
@@ -888,6 +939,8 @@ section {
   line-height: normal;
   letter-spacing: 1px;
   text-transform: uppercase;
+  margin-top: -150px;
+  cursor: pointer;
 }
 
 footer {
@@ -984,6 +1037,34 @@ footer {
     align-items: center;
   }
 }
+@media (max-width: 1200px) {
+  .project_info {
+    width: 700px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 800px;
+    gap: 60px;
+  }
+  .contact_box {
+    margin-top: 0;
+  }
+  .project_paragraph {
+    margin-top: 0;
+    width: 300px;
+    height: 400px;
+  }
+  .line_icon {
+    left: 190px;
+  }
+  .review-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 160px;
+  }
+}
 
 @media (max-width: 870px) {
   .footer_container2 {
@@ -1005,6 +1086,33 @@ footer {
     gap: 36px;
   }
 }
+
+@media (max-width: 750px) {
+  .project_info {
+    width: 329px;
+    height: 768px;
+    justify-content: start;
+  }
+  .kickstart {
+    font-size: 40px;
+  }
+  .project_paragraph {
+    width: 216px;
+    height: 293px;
+    font-size: 16px;
+  }
+  .contact_box {
+    gap: 20px;
+  }
+  #line_image {
+    width: 215px;
+    height: 108px;
+  }
+  .line_icon {
+    left: 65px;
+  }
+}
+
 @media (max-width: 635px) {
   .hr_box {
     width: 329px;
@@ -1038,5 +1146,36 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 16px;
+  }
+}
+
+@media (max-width: 590px) {
+  .review_photo {
+    width: 310px;
+    height: 270px;
+    bottom: 12px;
+    left: 8px;
+  }
+  .review_yellow_background {
+    width: 300px;
+    height: 230px;
+  }
+  .review_icon {
+    bottom: 196px;
+    right: 264px;
+    height: 70px;
+  }
+  .review_red_background {
+    top: 110px;
+    right: 211px;
+    width: 100px;
+    height: 129px;
+  }
+  .review_heading {
+    font-size: 40px;
+  }
+  .swiper {
+    width: 329px;
+    height: 288px;
   }
 }

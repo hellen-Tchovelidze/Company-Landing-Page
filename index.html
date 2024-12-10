@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header>
@@ -179,27 +183,52 @@
             <h1 class="review_heading">Reviews</h1>
           </div>
 
-          <div class="costumer_review">
-            <div class="review_info">
-              <p class="review_paragraph" id="review_paragraph">
-                "The sky was cloudless and of a deep dark blue <br />
-                the spectacle before us was indeed sublime sky <br />
-                was cloudless and of a deep dark."
-              </p>
-              <h1 class="customer_name" id="customer_name">Jaroslav Brabec</h1>
-              <span class="microsoft_span" id="microsoft_span">Microsoft</span>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" id="swiper_box">
+                <p class="review_paragraph" id="review_paragraph">
+                  "The sky was cloudless and of a deep dark blue <br />
+                  the spectacle before us was indeed sublime sky <br />
+                  was cloudless and of a deep dark."
+                </p>
+                <h1 class="customer_name" id="customer_name">
+                  Jaroslav Brabec
+                </h1>
+                <span class="microsoft_span" id="microsoft_span"
+                  >Microsoft</span
+                >
+              </div>
+              <div class="swiper-slide">
+                <p class="review_paragraph" id="review_paragraph_1">
+                  "The ocean waves were crashing against the shore, their
+                  rhythmic sound calming and peaceful as the sun dipped below
+                  the horizon, casting a warm golden glow."
+                </p>
+                <h1 class="customer_name" id="customer_name_1">
+                  Emily Thompson
+                </h1>
+                <span class="microsoft_span" id="microsoft_span_1">
+                  Google
+                </span>
+              </div>
+              <div class="swiper-slide">
+                <p class="review_paragraph" id="review_paragraph_2">
+                  "The mountains stood tall and imposing, their peaks dusted
+                  with snow while the air was crisp, fresh, and invigorating as
+                  we hiked toward the summit."
+                </p>
+                <h1 class="customer_name" id="customer_name_2">
+                  Michael Johnson
+                </h1>
+                <span class="microsoft_span" id="microsoft_span_2">
+                  Apple
+                </span>
+              </div>
             </div>
-            <img class="tear_icon" src="./images/tear_icon.svg" alt="icon" />
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
-
-          <div class="change_icons">
-            <div class="move_left" id="move_left">
-              <img src="./images/left_icon.svg" alt="icon" />
-            </div>
-            <div class="move_right" id="move_right">
-              <img src="./images/right_icon.svg" alt="icon" />
-            </div>
-          </div>
+          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         </div>
       </div>
     </section>
@@ -221,7 +250,7 @@
           the world, should form a part of a liberal education.
         </p>
         <div class="line_icon">
-          <img src="./images/line_icon.png" alt="icon" />
+          <img id="line_image" src="./images/line_icon.png" alt="icon" />
         </div>
       </div>
     </section>
