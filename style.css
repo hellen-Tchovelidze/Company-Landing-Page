@@ -726,6 +726,7 @@ section {
   letter-spacing: 1px;
   text-transform: uppercase;
   border: 0;
+  cursor: pointer;
 }
 .project_paragraph {
   width: 470px;
