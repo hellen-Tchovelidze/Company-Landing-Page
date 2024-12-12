@@ -1,7 +1,6 @@
 let insight_container = document.getElementById("insight_container");
 let browseall = document.getElementById("browseall");
-<<<<<<< Updated upstream
-=======
+
 let subscribe_button = document.getElementById("subscribe_button");
 let email = document.getElementById("email");
 let move_left = document.getElementById("move_left");
@@ -11,8 +10,37 @@ let customer_name = document.getElementById("customer_name");
 let microsoft_span = document.getElementById("microsoft_span");
 let aboutBtn = document.querySelector(".sec_about_btn")
 let ulAdd = document.getElementById("ul_add")
+let CreatBtn = document.querySelector(".sec_creative_btn")
+let Creatp = document.getElementById("Crap")
+let isVisible = false;
 let isAboutVisible = false;
+CreatBtn.addEventListener("click",  async (event) => {
+    event.preventDefault()
 
+    if (isVisible) {
+        Creatp.innerHTML=""
+        isVisible = false
+        CreatBtn.textContent = "Explore"
+    } else {
+        try {
+            let box = await fetch( `https://fakestoreapi.com/products/1`)
+            let result = await box.json()
+        
+           
+                let p = document.createElement("p")
+                p.textContent = result.description
+                Creatp.appendChild(p)
+                Creatp.classList.toggle("Fechtex")
+          isVisible= true
+            CreatBtn.textContent = "up"
+            
+           } catch (error) {
+          console.log("error");
+          
+           }
+    }
+  
+})
 
 // ეს ღილაკი მუშაობს რომ api და წამოიღოს 3 id ლისთისთვის 
 aboutBtn.addEventListener("click", async (event) => {
@@ -43,43 +71,21 @@ aboutBtn.addEventListener("click", async (event) => {
 });
 
 
->>>>>>> Stashed changes
 
+// Email vallidation
+subscribe_button.addEventListener("click", (event) => {
+  event.preventDefault();
+  let email_value = email.value;
+  let email_validation = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  if (email_validation.test(email_value)) {
+    alert("Email is correct");
+    email.remove();
+  } else {
+    alert("Email is not correct");
+  }
+});
 
-
-let CreatBtn = document.querySelector(".sec_creative_btn")
-let Creatp = document.getElementById("Crap")
-let isVisible = false;
-CreatBtn.addEventListener("click",  async (event) => {
-    event.preventDefault
-
-    if (isVisible) {
-        Creatp.innerHTML=""
-        isVisible = false
-        CreatBtn.textContent = "Explore"
-    } else {
-        try {
-            let box = await fetch( `https://fakestoreapi.com/products/1`)
-            let result = await box.json()
-        
-           
-                let p = document.createElement("p")
-                p.textContent = result.description
-                Creatp.appendChild(p)
-                Creatp.classList.toggle("Fechtex")
-          isVisible= true
-            CreatBtn.textContent = "up"
-            
-           } catch (error) {
-          console.log("error");
-          
-           }
-    }
-  
-})
-
-
-
+// make divs visible
 if (localStorage.getItem("newdivs") === "true") {
   insight_container.classList.add("visible");
 }
@@ -94,4 +100,16 @@ browseall.addEventListener("click", () => {
   }
 });
 
+
+// make slider
+
+document.addEventListener("DOMContentLoaded", function () {
+  var swiper = new Swiper(".mySwiper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    loop: true,
+  });
+});
 
