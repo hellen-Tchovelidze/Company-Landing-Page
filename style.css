@@ -31,6 +31,26 @@ header {
   padding: 30px;
 }
 
+
+.burger_container{
+  display: none;
+}
+.burger_icon{
+  display: none;
+  
+}
+.burger_A{
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #333333;
+  text-decoration: none;
+}
+
 .header_container {
   display: flex;
   justify-content: center;
@@ -1033,7 +1053,7 @@ footer {
   color: #333333;
   width: 500px;
 }
-=======
+
 /* responsive */
 
 @media (max-width: 1460px) {

@@ -12,6 +12,8 @@ let aboutBtn = document.querySelector(".sec_about_btn")
 let ulAdd = document.getElementById("ul_add")
 let CreatBtn = document.querySelector(".sec_creative_btn")
 let Creatp = document.getElementById("Crap")
+let burgerIcon = document.getElementById("burgerIcon")
+let burgerMenu = document.getElementById("burger_menu")
 let isVisible = false;
 let isAboutVisible = false;
 CreatBtn.addEventListener("click",  async (event) => {
@@ -70,6 +72,11 @@ aboutBtn.addEventListener("click", async (event) => {
   }
 });
 
+
+
+burgerIcon.addEventListener("click", () => {
+  burgerMenu.classList.toggle("burger_icon");
+});
 
 
 // Email vallidation
