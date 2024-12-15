@@ -1019,7 +1019,8 @@ footer {
 }
 .footer_container1 {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 350px;
   padding-top: 76px;
 }
 .cmp {
@@ -1097,6 +1098,9 @@ footer {
   .footer_container2 {
     gap: 200px;
   }
+  .footer_container1 {
+    gap: 150px;
+  }
 }
 
 @media (max-width: 1230px) {
@@ -1105,7 +1109,7 @@ footer {
     margin-top: 100px;
   }
   .hr_box {
-    width: 600px;
+    width: 845px;
   }
   .insight_box1 {
     flex-direction: column;
@@ -1152,6 +1156,9 @@ footer {
     gap: 50px;
     flex-direction: column;
   }
+  .footer_container1 {
+    gap: 80px;
+  }
   footer {
     height: 650px;
   }
@@ -1165,6 +1172,9 @@ footer {
   .newstaller_box {
     flex-direction: column;
     gap: 36px;
+  }
+  .hr_box {
+    width: 600px;
   }
 }
 
@@ -1194,7 +1204,7 @@ footer {
   }
 }
 
-@media (max-width: 635px) {
+@media (max-width: 660px) {
   .hr_box {
     width: 329px;
   }
