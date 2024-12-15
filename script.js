@@ -14,7 +14,7 @@ subscribe_button.addEventListener("click", (event) => {
   let email_value = email.value;
   let email_validation = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
   if (email_validation.test(email_value)) {
-    alert("Email is correct");
+    localStorage.setItem("userEmail", email_value);
     email.remove();
   } else {
     alert("Email is not correct");
