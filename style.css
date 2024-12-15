@@ -135,17 +135,22 @@ section {
   position: relative;
 }
 .yellow_div {
-  width: 462px;
+  max-width: 462px;
   height: 480px;
-  background-color: #fbd34b;
-  border-top-left-radius: 100px;
-  background-image: url(./images/Marketing-Business-Plan-1024x576.jpg);
-  background-size: cover;
-}
+width: 100%;
 
+
+}
+.Marketing_plan_img{
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 100px;
+  object-fit: cover;
+}
 .img_grap {
   position: absolute;
-  width: 216px;
+  max-width: 216px;
+  width: 100%;
   height: 128px;
   top: 400px;
   left: -60px;
@@ -153,7 +158,8 @@ section {
 }
 
 .img_rectangle {
-  width: 132px;
+  max-width: 132px;
+  width: 100%;
   height: 184px;
   top: 160px;
   left: 370px;
@@ -163,7 +169,8 @@ section {
 
 .icone_speack {
   position: absolute;
-  width: 100px;
+  max-width: 100px;
+  width: 100%;
   height: 100px;
   top: 100px;
   left: -60px;
@@ -222,26 +229,30 @@ section {
 }
 
 .grey_div {
-  width: 520px;
+  max-width: 520px;
+  width: 100%;;
   height: 448px;
-  background-color: #d8d8d8;
 
+}
+.Build_img{
+  width: 100%;
+  height: 100%;
   border-radius: 8px;
   border-top-right-radius: 100px;
-  background-image: url(./images/We\ Build.jpg);
-  background-size: cover;
+  object-fit: cover; 
 }
-
 .icone_beg {
   position: absolute;
-  width: 100px;
+  max-width: 100px;
+  width: 100%;
   height: 100px;
   top: 80px;
   left: -60px;
 }
 
 .yellow_cont {
-  width: 482px;
+  max-width: 482px;
+  width: 100%;
   height: 326px;
   top: 140px;
   left: -20px;
@@ -250,7 +261,8 @@ section {
 }
 
 .orange_cont {
-  width: 132px;
+  max-width: 132px;
+  width: 100%;
   height: 160px;
   top: 320px;
   left: -35px;
@@ -259,7 +271,8 @@ section {
 }
 
 .done_icone {
-  width: 128px;
+  max-width: 128px;
+  width: 100%;
   height: 128px;
   top: 390px;
   left: 425px;
@@ -333,7 +346,8 @@ color: #333;
 }
 
 .box_list {
-  width: 270px;
+  max-width: 270px;
+  width: 100%;
   height: 368px;
   border: 1px solid #e6edf5;
   border-radius: 8px;
@@ -411,7 +425,8 @@ color: #333;
 }
 
 .Modern_div {
-  width: 470px;
+  max-width: 470px;
+  width: 100%;
   height: 144px;
   border-radius: 8px;
   box-shadow: 0px 24px 48px 0px #00115614;
@@ -445,26 +460,35 @@ color: #333;
 }
 
 .gray_img_div {
-  width: 462px;
+  max-width: 462px;
+  width: 100%;
   height: 480px;
-  border-radius: 100px 8px 8px 8px;
-  background-color: #d8d8d8;
-  background-image: url(./images/Smart\ Complex.jpg);
-  background-size: cover;
+  
+
 }
 
+.Complex_img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100px 8px 8px 8px;
+
+}
 .diagram {
-  width: 216px;
+  max-width: 216px;
+  width: 100%;
   height: 128px;
   top: 430px;
-  left: 120px;
+  left: 30%;
+ 
   border-radius: 8px 0px 0px 0px;
   position: absolute;
   z-index: 1;
 }
 
 .tab {
-  width: 100px;
+  max-width: 100px;
+  width: 100%;
   height: 100px;
   top: 90px;
   left: -55px;
@@ -475,24 +499,29 @@ color: #333;
 
 .yellow_pos {
   position: absolute;
-  width: 173px;
-  height: 439px;
+  max-width: 173px;
+  width: 100%;
+  max-height: 439px;
+height: 100%;
   top: 60px;
-  left: 300px;
-  gap: 0px;
+left: 68%;
+  
+ 
   border-radius: 12px 0px 0px 0px;
-  opacity: 0px;
+ 
   z-index: -2;
 }
 
 .brown_con {
   z-index: -1;
   position: absolute;
-  width: 216px;
-  height: 128px;
-  top: -30px;
-  left: 275px;
-  border-radius: 8px 0px 0px 0px;
+  max-width:  216px;
+  width: 100%;
+height: 128px;
+top: -30px;
+left: 60%;
+border-radius: 8px 0px 0px 0px;
+
 }
 
 .grey_div {
@@ -1063,14 +1092,14 @@ footer {
 }
 
 /* responsive */
-
+/* 
 @media (max-width: 1460px) {
   .footer_container2 {
     gap: 200px;
   }
 }
 
-@media (max-width: 1220px) {
+@media (max-width: 1230px) {
   .insight_container1 {
     flex-wrap: wrap;
     margin-top: 100px;
@@ -1231,4 +1260,230 @@ footer {
     height: 288px;
   }
 }
+ */
 
+
+ @media (max-width: 1230px) {
+  header{
+    padding: 60px;
+  }
+  section{
+    padding: 60px;
+  }
+  .yellow_div{
+    max-width: 362px;
+    max-height: 359px;
+  }
+  .img_rectangle{
+    left: 70%;
+    top: 30%;
+  }
+
+  .img_grap{
+    top: 80%;
+  }
+  
+  .gray_img_div{
+    max-width: 342px;
+  height: 380px;
+  width: 100%;
+  
+  }
+  .yellow_cont{
+    max-width: 300px;
+    width: 100%;
+    max-height: 200px;
+    height: 100%;
+    left: -5%;
+  }
+.orange_cont{
+  max-width: 100px;
+  width: 100%;
+  max-height: 100px;
+  height: 100%;
+  left: -5%;
+  top: 80%;
+}
+
+  .grey_div{
+    max-width: 362px;
+    width: 100%;
+    height: 308px;
+  }
+.done_icone{
+  left: 300px;
+  top: 250px;
+}
+.icone_beg {
+
+
+  top: 80px;
+  left: -10%;
+}
+
+.yellow_pos{
+  top: 10%;
+  left: 55%;
+}
+.brown_con{
+  left: 45%;
+}
+.diagram{
+  top: 90%;
+}
+
+}
+
+@media (max-width: 870px) {
+  header{
+    padding: 60px;
+  }
+  section{
+    padding: 30px;
+  }
+  
+  .sec_creative_heading{
+    font-family: Hind Siliguri;
+font-size: 56px;
+font-weight: 700;
+line-height: 64px;
+letter-spacing: -1px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+  }
+  .sec_creative_tex_container{
+    font-family: Work Sans;
+font-size: 20px;
+font-weight: 400;
+line-height: 32px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+  }
+.sec_about_heading{
+  font-family: Hind Siliguri;
+font-size: 40px;
+font-weight: 700;
+line-height: 48px;
+letter-spacing: -1px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+.sec_about_paragraph{
+  font-family: Hind Siliguri;
+font-size: 24px;
+font-weight: 700;
+line-height: 32px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+.list{
+  font-family: Work Sans;
+font-size: 16px;
+font-weight: 400;
+line-height: 32px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+
+
+.done_icone{
+  left: 80%;
+}
+.sec_features_heading{
+  font-family: Hind Siliguri;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -1px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  
+}
+.sec_features_tex{
+  font-family: Work Sans;
+font-size: 16px;
+font-weight: 400;
+line-height: 32px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+
+.Modern_heading{
+  font-family: Hind Siliguri;
+font-size: 24px;
+font-weight: 700;
+line-height: 32px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+
+.Modern_paragraph{
+  font-family: Work Sans;
+font-size: 14px;
+font-weight: 400;
+line-height: 24px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+
+section{
+  display: flex;
+ flex-wrap: wrap;
+}
+
+.sec_creative{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  
+}
+
+.sec_about{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+}
+
+.sec_features{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  
+}
+}
+
+
+@media (max-width: 745px) {
+  .header_container{
+    display: none;
+  }
+  .btn_contact{
+    display: none;
+  }
+  .burger_container{
+    display: flex;
+  
+  }
+  #burgerIcon{
+    display: flex;
+    flex-direction: column;
+  }
+}
