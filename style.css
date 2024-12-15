@@ -5,7 +5,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  transition: ease-in-out;
+  transition: ease-in-out, 2s all;
 }
 
 body {
@@ -29,6 +29,25 @@ header {
   max-width: 1140px;
   width: 100%;
   padding: 30px;
+}
+
+.burger_container{
+  display: none;
+}
+.burger_icon{
+  display: none;
+  
+}
+.burger_A{
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #333333;
+  text-decoration: none;
 }
 
 .header_container {
@@ -280,6 +299,16 @@ section {
   color: #333333;
 }
 
+.li_js{
+  font-family: Work Sans;
+font-size: 16px;
+font-weight: 400;
+line-height: 32px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #333;
+}
 .sec_about_btn {
   width: 170px;
   height: 48px;
@@ -347,6 +376,15 @@ section {
 
 .sec_list_paragraph {
   color: rgba(51, 51, 51, 0.5);
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.sec_list_paragraph:hover{
+  color: black;
 }
 
 .sec_features_heading {
@@ -1012,6 +1050,19 @@ footer {
   gap: 67px;
 }
 
+
+.Fechtex{
+  font-family: Work Sans;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #333333;
+  width: 500px;
+}
+
 /* responsive */
 
 @media (max-width: 1460px) {
@@ -1190,3 +1241,4 @@ footer {
     height: 288px;
   }
 }
+
