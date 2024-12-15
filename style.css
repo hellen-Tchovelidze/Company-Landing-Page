@@ -30,12 +30,27 @@ header {
   width: 100%;
   padding: 30px;
 }
+.line{
+  height: 2px;
+  width: 30px;
+  background-color: black;
 
+}
+
+.linetow{
+  height: 2px;
+  width: 30px;
+  background-color: black;
+}
+.linerotate{
+  transform: rotate(45deg);
+}
 .burger_container {
   display: none;
 }
 .burger_icon {
   display: none;
+ 
 }
 .burger_A {
   font-family: Work Sans;
@@ -1359,10 +1374,19 @@ footer {
   }
   .burger_container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+    max-width: 750px;
+    width: 100%;
   }
   #burgerIcon {
     display: flex;
     flex-direction: column;
+    gap: 5px;
+    border: none;
+    background-color: transparent;
+    
   }
 }
 @media (max-width: 660px) {
