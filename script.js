@@ -68,8 +68,13 @@ aboutBtn.addEventListener("click", async (event) => {
   }
 });
 
+let line = document.querySelector(".line")
+let lineTow = document.querySelector(".linetow")
+
 burgerIcon.addEventListener("click", () => {
   burgerMenu.classList.toggle("burger_icon");
+line.classList.toggle("linerotate")
+lineTow.classList.toggle("linerotate")
 });
 
 // Email vallidation
