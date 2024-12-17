@@ -986,8 +986,8 @@ section {
   margin-top: 79px;
 }
 .line_icon {
-  bottom: -28px;
-  left: 452px;
+  bottom: -7%;
+  left: 38%;
   position: absolute;
 }
 
@@ -1379,14 +1379,19 @@ footer {
   .diagram {
     top: 90%;
   }
-
+  .review_icon {
+    right: 339px;
+    bottom: 268px;
+  }
   .review_photo {
     width: 77%;
   }
-  .review_icon {
-    max-width: 100px;
-    right: 87%;
-  }
+  /* .review_red_background {
+    right: 270px;
+    top: 215px;
+    height: 150px;
+    width: 150px;
+  } */
   .review_yellow_background {
     width: 76%;
   }
@@ -1405,7 +1410,7 @@ footer {
     height: 400px;
   }
   .line_icon {
-    left: 200px;
+    left: 28%;
   }
 }
 @media (max-width: 1194px) {
@@ -1422,7 +1427,7 @@ footer {
   }
 }
 @media (max-width: 920px) {
-  .marketing_heading {
+  /* .marketing_heading {
     font-size: 40px;
     width: 338px;
   }
@@ -1446,7 +1451,7 @@ footer {
   }
   .rocket_icon {
     right: 106%;
-  }
+  } */
 }
 @media (max-width: 870px) {
   .footer_container2 {
@@ -1654,7 +1659,7 @@ footer {
     height: 108px;
   }
   .line_icon {
-    left: 215px;
+    left: 31%;
   }
 }
 @media (max-width: 745px) {
@@ -1719,6 +1724,23 @@ footer {
 }
 
 @media (max-width: 590px) {
+  .review_photo {
+    width: 310px;
+    height: 270px;
+    bottom: 12px;
+    left: 8px;
+  }
+  .review_yellow_background {
+    width: 300px;
+    height: 230px;
+  }
+
+  .review_red_background {
+    top: 110px;
+    right: 211px;
+    width: 100px;
+    height: 129px;
+  }
   .review_heading {
     font-size: 40px;
   }
@@ -1738,24 +1760,8 @@ footer {
     height: 107%;
   }
   .review_icon {
-    right: 78%;
-  }
-  .result_image_box {
-    width: 108%;
-  }
-  .result_red {
-    max-width: 154px;
-    right: 59%;
-  }
-  .result_photo {
-    height: 107%;
-    width: 107%;
-  }
-  .rocket_icon {
-    bottom: 70%;
-    max-width: 76px;
-    width: 100%;
-    right: 91%;
+    bottom: 177px;
+    right: 228px;
   }
 }
 
@@ -1770,9 +1776,26 @@ footer {
   .insight_box2 {
     width: 320px;
   }
-
+  /* .review_red_background {
+    right: 258px;
+    top: 157px;
+    height: 100px;
+    width: 72px;
+  }
+  .review_yellow_background {
+    width: 320px;
+    height: 250px;
+  }
+  .review_photo {
+    height: 295px;
+    width: 318px;
+  }
+  .review_icon {
+    bottom: 200px;
+    right: 246px;
+  } */
   .line_icon {
-    left: 50px;
+    left: 10%;
   }
   #insights_paragraph2 {
     font-size: 14px;
