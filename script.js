@@ -68,13 +68,31 @@ aboutBtn.addEventListener("click", async (event) => {
   }
 });
 
-let line = document.querySelector(".line")
-let lineTow = document.querySelector(".linetow")
+let line = document.querySelector(".line");
+let lineTow = document.querySelector(".linetow");
 
 burgerIcon.addEventListener("click", () => {
   burgerMenu.classList.toggle("burger_icon");
-line.classList.toggle("linerotate")
-lineTow.classList.toggle("linerotate")
+  line.classList.toggle("linerotate");
+  lineTow.classList.toggle("linerotate");
+});
+//////////////////////////////////////////////
+
+let browseall2 = document.getElementById("browseall");
+let sec_case2 = document.getElementById("sec_case2");
+
+if (localStorage.getItem("newdivs2") === "true") {
+  sec_case2.classList.add("visible");
+}
+
+browseall2.addEventListener("click", () => {
+  if (sec_case2.classList.contains("visible")) {
+    sec_case2.classList.remove("visible");
+    localStorage.setItem("newdivs2", "false");
+  } else {
+    sec_case2.classList.add("visible");
+    localStorage.setItem("newdivs2", "true");
+  }
 });
 
 // Email vallidation
@@ -98,11 +116,13 @@ if (localStorage.getItem("newdivs") === "true") {
 
 browseall.addEventListener("click", () => {
   if (insight_container.classList.contains("visible")) {
+    browseall.style.marginTop = "-40px";
     insight_container.classList.remove("visible");
     localStorage.setItem("newdivs", "false");
   } else {
     insight_container.classList.add("visible");
     localStorage.setItem("newdivs", "true");
+    browseall.style.marginTop = "-250px";
   }
 });
 
