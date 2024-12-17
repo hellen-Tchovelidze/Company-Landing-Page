@@ -746,8 +746,8 @@ section {
   margin-top: 79px;
 }
 .line_icon {
-  bottom: -28px;
-  left: 452px;
+  bottom: -7%;
+  left: 38%;
   position: absolute;
 }
 
@@ -1141,16 +1141,16 @@ footer {
   }
   .review_icon {
     width: 100px;
-    right: 339px;
-    bottom: 268px;
+    right: 83%;
+    bottom: 77%;
   }
   .review_photo {
     height: 400px;
     width: 400px;
   }
   .review_red_background {
-    right: 270px;
-    top: 215px;
+    right: 68%;
+    top: 62%;
     height: 150px;
     width: 150px;
   }
@@ -1172,7 +1172,7 @@ footer {
     height: 400px;
   }
   .line_icon {
-    left: 200px;
+    left: 28%;
   }
   /*  */
 }
@@ -1362,7 +1362,7 @@ footer {
     height: 108px;
   }
   .line_icon {
-    left: 215px;
+    left: 31%;
   }
 }
 @media (max-width: 745px) {
@@ -1425,8 +1425,8 @@ footer {
   .review_photo {
     width: 310px;
     height: 270px;
-    bottom: 12px;
-    left: 8px;
+    bottom: 5%;
+    left: 3%;
   }
   .review_yellow_background {
     width: 300px;
@@ -1434,8 +1434,8 @@ footer {
   }
 
   .review_red_background {
-    top: 110px;
-    right: 211px;
+    top: 50%;
+    right: 70%;
     width: 100px;
     height: 129px;
   }
@@ -1448,8 +1448,8 @@ footer {
     left: 130px;
   }
   .review_icon {
-    bottom: 177px;
-    right: 228px;
+    bottom: 74%;
+    right: 77%;
   }
 }
 
@@ -1465,8 +1465,8 @@ footer {
     width: 320px;
   }
   .review_red_background {
-    right: 258px;
-    top: 157px;
+    right: 81%;
+    top: 65%;
     height: 100px;
     width: 72px;
   }
@@ -1478,12 +1478,9 @@ footer {
     height: 295px;
     width: 318px;
   }
-  .review_icon {
-    bottom: 200px;
-    right: 246px;
-  }
+
   .line_icon {
-    left: 50px;
+    left: 10%;
   }
 }
 
