@@ -1,5 +1,5 @@
 let insight_container = document.getElementById("insight_container");
-let browseall = document.getElementById("browseall");
+let browseall2 = document.getElementById("browseall2");
 
 let subscribe_button = document.getElementById("subscribe_button");
 let email = document.getElementById("email");
@@ -78,20 +78,22 @@ burgerIcon.addEventListener("click", () => {
 });
 //////////////////////////////////////////////
 
-let browseall2 = document.getElementById("browseall");
+let browseall1 = document.getElementById("browseall1");
 let sec_case2 = document.getElementById("sec_case2");
 
 if (localStorage.getItem("newdivs2") === "true") {
   sec_case2.classList.add("visible");
 }
 
-browseall2.addEventListener("click", () => {
+browseall1.addEventListener("click", () => {
   if (sec_case2.classList.contains("visible")) {
     sec_case2.classList.remove("visible");
     localStorage.setItem("newdivs2", "false");
+    browseall1.style.marginTop = "-40px";
   } else {
     sec_case2.classList.add("visible");
     localStorage.setItem("newdivs2", "true");
+    browseall1.style.marginTop = "-250px";
   }
 });
 
@@ -114,15 +116,13 @@ if (localStorage.getItem("newdivs") === "true") {
   insight_container.classList.add("visible");
 }
 
-browseall.addEventListener("click", () => {
+browseall2.addEventListener("click", () => {
   if (insight_container.classList.contains("visible")) {
-    browseall.style.marginTop = "-40px";
     insight_container.classList.remove("visible");
     localStorage.setItem("newdivs", "false");
   } else {
     insight_container.classList.add("visible");
     localStorage.setItem("newdivs", "true");
-    browseall.style.marginTop = "-250px";
   }
 });
 
