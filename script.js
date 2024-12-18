@@ -31,7 +31,7 @@ CreatBtn.addEventListener("click", async (event) => {
       let p = document.createElement("p");
       p.textContent = result.description;
       Creatp.appendChild(p);
-      Creatp.classList.toggle("Fechtex");
+      Creatp.classList.toggle("Fechtex1");
       isVisible = true;
       CreatBtn.textContent = "up";
     } catch (error) {
@@ -59,7 +59,7 @@ aboutBtn.addEventListener("click", async (event) => {
         ulAdd.appendChild(li);
       });
 
-      ulAdd.classList.toggle("li_js");
+      // ulAdd.classList.toggle("li_js");
       isAboutVisible = true;
       aboutBtn.textContent = "show less";
     } catch (error) {
@@ -74,7 +74,7 @@ let lineTow = document.querySelector(".linetow");
 burgerIcon.addEventListener("click", () => {
   burgerMenu.classList.toggle("burger_icon");
   line.classList.toggle("linerotate");
-  lineTow.classList.toggle("linerotate");
+  lineTow.classList.toggle("linerotate2");
 });
 //////////////////////////////////////////////
 
