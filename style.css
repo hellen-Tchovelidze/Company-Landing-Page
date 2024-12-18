@@ -757,6 +757,8 @@ section {
   width: 100%;
 }
 .result_image_cont {
+  display: flex;
+  align-items: end;
   position: relative;
   max-width: 255px;
   width: 100%;
@@ -1631,6 +1633,9 @@ footer {
   }
   .review-container {
     margin-top: 350px;
+  }
+  .result_image_cont{
+    align-items: normal;
   }
 }
 

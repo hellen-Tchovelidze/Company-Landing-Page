@@ -14,6 +14,9 @@ let CreatBtn = document.querySelector(".sec_creative_btn");
 let Creatp = document.getElementById("Crap");
 let burgerIcon = document.getElementById("burgerIcon");
 let burgerMenu = document.getElementById("burger_menu");
+let browseall1 = document.getElementById("browseall1");
+let sec_case2 = document.getElementById("sec_case2");
+
 let isVisible = false;
 let isAboutVisible = false;
 CreatBtn.addEventListener("click", async (event) => {
@@ -77,9 +80,6 @@ burgerIcon.addEventListener("click", () => {
   lineTow.classList.toggle("linerotate");
 });
 //////////////////////////////////////////////
-
-let browseall1 = document.getElementById("browseall1");
-let sec_case2 = document.getElementById("sec_case2");
 
 if (localStorage.getItem("newdivs2") === "true") {
   sec_case2.classList.add("visible");
