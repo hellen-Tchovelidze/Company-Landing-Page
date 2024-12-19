@@ -21,11 +21,23 @@
           </button>
           <div class="burger_icon" id="burger_menu">
             <ul class="burg">
-              <li><a href="https://rno1.com/about" class="burger_A">About</a></li>
-              <li><a href="https://rno1.com/work" class="burger_A">Portfolio</a></li>
-              <li><a href="https://rno1.com/capabilities" class="burger_A">Service</a></li>
-              <li><a href="https://rno1.com/retrn" class="burger_A">Blog</a></li>
-              <li><a href="https://rno1.com/contact" class="burger_A">Contact</a></li>
+              <li>
+                <a href="https://rno1.com/about" class="burger_A">About</a>
+              </li>
+              <li>
+                <a href="https://rno1.com/work" class="burger_A">Portfolio</a>
+              </li>
+              <li>
+                <a href="https://rno1.com/capabilities" class="burger_A"
+                  >Service</a
+                >
+              </li>
+              <li>
+                <a href="https://rno1.com/retrn" class="burger_A">Blog</a>
+              </li>
+              <li>
+                <a href="https://rno1.com/contact" class="burger_A">Contact</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -190,14 +202,63 @@
     </section>
 
     <section class="sec_loop">
-      <div class="moving_images">
-        <img src="./images/icon1.svg" alt="" />
-        <img src="./images/icon2.svg" alt="" />
-        <img src="./images/icon3.svg" alt="" />
-        <img src="./images/icon4.svg" alt="" />
-        <img src="./images/icon5.svg" alt="" />
-        <img src="./images/icon6.svg" alt="" />
-      </div>
+      <!DOCTYPE html>
+      <html lang="en">
+        <head>
+          <meta charset="UTF-8" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          <title>Splide Auto Scroll Slider</title>
+          <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.6/dist/css/splide.min.css"
+          />
+        </head>
+        <body>
+          <div id="auto-scroll-slider" class="splide">
+            <div style="width: 1140px" class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <img src="./images/icon1.svg" alt="" />
+                </li>
+                <li class="splide__slide">
+                  <img src="./images/icon2.svg" alt="" />
+                </li>
+                <li class="splide__slide">
+                  <img src="./images/icon3.svg" alt="" />
+                </li>
+                <li class="splide__slide">
+                  <img src="./images/icon4.svg" alt="" />
+                </li>
+                <li class="splide__slide">
+                  <img src="./images/icon5.svg" alt="" />
+                </li>
+                <li class="splide__slide">
+                  <img src="./images/icon6.svg" alt="" />
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.6/dist/js/splide.min.js"></script>
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const splide = new Splide(".splide", {
+                type: "loop",
+                drag: "free",
+                focus: "center",
+                perPage: 6,
+                autoplay: true,
+                interval: 3000,
+              });
+
+              splide.mount();
+            });
+          </script>
+        </body>
+      </html>
     </section>
 
     <section class="sec_company_case">
