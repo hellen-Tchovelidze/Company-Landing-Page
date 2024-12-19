@@ -146,6 +146,14 @@ section {
 .photo_div {
   position: relative;
 }
+
+.moving_images {
+  display: flex;
+  gap: 72px;
+  justify-content: center;
+  align-items: center;
+}
+
 .yellow_div {
   max-width: 462px;
   height: 480px;
@@ -886,7 +894,11 @@ section {
 .swiper-wrapper {
   display: flex;
 }
-
+.button_cont {
+  display: flex;
+  gap: 10px;
+  margin-top: 48px;
+}
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -900,9 +912,16 @@ section {
   border-radius: 8px;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  color: #f07566 !important;
+.swiper_button {
+  background-color: #f07566;
+  border-radius: 50%;
+  border: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .product-description {
@@ -1161,8 +1180,9 @@ section {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: max-height 0.9s ease-out, opacity 0.3s ease-out;
+  transition: max-height 1.3s ease, opacity 1.3s ease, transform 1.3s ease;
   padding: 0 15px;
+  transform-origin: top;
 }
 
 #insight_container.visible {
@@ -1199,6 +1219,7 @@ footer {
   height: 528px;
   background-color: #3f3836;
   margin-top: 200px;
+  position: sticky;
 }
 .footer_container1 {
   display: flex;
@@ -1208,6 +1229,8 @@ footer {
 }
 .cmp {
   color: #fff;
+  font-size: 40px;
+  text-decoration: none;
 }
 .red_paragraph {
   color: #f07566;
@@ -1320,9 +1343,7 @@ footer {
   section {
     padding: 60px;
   }
-  #insight_container.visible {
-    padding: 60px;
-  }
+
   .yellow_div {
     max-width: 362px;
     max-height: 359px;
@@ -1634,7 +1655,7 @@ footer {
   .review-container {
     margin-top: 350px;
   }
-  .result_image_cont{
+  .result_image_cont {
     align-items: normal;
   }
 }

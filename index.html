@@ -189,84 +189,17 @@
       </div>
     </section>
 
-    <section class="sec_slider_loop">
-      <!DOCTYPE html>
-      <html lang="en">
-        <head>
-          <meta charset="utf-8" />
-          <title>Swiper demo</title>
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
-          />
-          <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-          />
-
-          <style>
-            .custom-swiper {
-              width: 100%;
-              height: 150px;
-            }
-
-            .custom-slide {
-              width: 200px;
-              text-align: center;
-              font-size: 18px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
-          </style>
-        </head>
-
-        <body>
-          <div class="swiper custom-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide custom-slide">
-                <img src="./images/icon1.svg" alt="" />
-              </div>
-              <div class="swiper-slide custom-slide">
-                <img src="./images/icon2.svg" alt="" />
-              </div>
-              <div class="swiper-slide custom-slide">
-                <img src="./images/icon3.svg" alt="" />
-              </div>
-              <div class="swiper-slide custom-slide">
-                <img src="./images/icon4.svg" alt="" />
-              </div>
-              <div class="swiper-slide custom-slide">
-                <img src="./images/icon5.svg" alt="" />
-              </div>
-              <div class="swiper-slide custom-slide">
-                <img src="./images/icon6.svg" alt="" />
-              </div>
-            </div>
-          </div>
-
-          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-          <script>
-            var customSwiper = new Swiper(".custom-swiper", {
-              slidesPerView: 5,
-              spaceBetween: 100,
-              loop: true,
-
-              centeredSlides: true,
-              autoplay: {
-                delay: 500,
-                disableOnInteraction: false,
-              },
-              pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-              },
-            });
-          </script>
-        </body>
-      </html>
+    <section class="sec_loop">
+      <div class="moving_images">
+        <img src="./images/icon1.svg" alt="" />
+        <img src="./images/icon2.svg" alt="" />
+        <img src="./images/icon3.svg" alt="" />
+        <img src="./images/icon4.svg" alt="" />
+        <img src="./images/icon5.svg" alt="" />
+        <img src="./images/icon6.svg" alt="" />
+      </div>
     </section>
+
     <section class="sec_company_case">
       <div class="company_case_box">
         <li class="article">Portfolio</li>
@@ -469,7 +402,7 @@
 
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-              <div class="swiper-slide" id="swiper_box">
+              <div class="swiper-slide">
                 <p class="review_paragraph" id="review_paragraph">
                   "The sky was cloudless and of a deep dark blue <br />
                   the spectacle before us was indeed sublime sky <br />
@@ -509,9 +442,16 @@
                 </span>
               </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
           </div>
+          <div class="button_cont">
+            <button class="swiper_button" id="swipe_left">
+              <img src="./images/go_left.svg" alt="icon" />
+            </button>
+            <button class="swiper_button" id="swipe_right">
+              <img src="./images/go_right.svg" alt="icon" />
+            </button>
+          </div>
+
           <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         </div>
       </div>
@@ -659,9 +599,10 @@
     <section class="sec_button">
       <button class="browseall" id="browseall2">Browse All</button>
     </section>
+
     <footer>
       <div class="footer_container1">
-        <h1 class="cmp">CMP</h1>
+        <a class="cmp" href="./index.html">CMP</a>
         <div class="list_container">
           <p class="red_paragraph">Menu</p>
           <p class="footer_paragraph_lower">

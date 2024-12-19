@@ -129,11 +129,18 @@ browseall2.addEventListener("click", () => {
 // make slider
 
 document.addEventListener("DOMContentLoaded", function () {
-  var swiper = new Swiper(".mySwiper", {
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+  var swiper1 = new Swiper(".mySwiper", {
     loop: true,
   });
+  let right = document.getElementById("swipe_right");
+  let left = document.getElementById("swipe_left");
+  right.addEventListener("click", function () {
+    swiper1.slidePrev();
+  });
+  left.addEventListener("click", function () {
+    swiper1.slideNext();
+  });
 });
+
+
+
