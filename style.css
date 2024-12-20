@@ -510,14 +510,16 @@ section {
   overflow: hidden;
   max-width: 1140px;
 }
+
 .icon_cont {
   display: flex;
-  gap: 80px;
+  width: max-content;
   animation: slide 12s linear infinite;
 }
 
 .icon_cont img {
   width: 100px;
+  margin-right: 80px;
 }
 
 @keyframes slide {
@@ -1727,6 +1729,11 @@ footer {
     animation: none;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 80px;
+
+  }
+  .icon_cont img {
+    margin: 0;
   }
 }
 
