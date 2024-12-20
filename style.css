@@ -44,20 +44,19 @@ header {
 .linerotate {
   transform: rotate(140deg);
 }
-.linerotate2{
+.linerotate2 {
   transform: rotate(58deg);
 }
 .burger_container {
   display: none;
 }
-.burger_cmp{
+.burger_cmp {
   position: absolute;
   top: 7%;
   left: 6%;
 }
 .burger_icon {
   display: none;
-  
 }
 .burger_A {
   font-family: Work Sans;
@@ -70,22 +69,22 @@ header {
   color: #333333;
   text-decoration: none;
 }
-.burg{
+.burg {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #f07566; 
+  background-color: #f07566;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 1000; 
+  z-index: 1000;
   list-style: none;
   margin: 0;
   padding: 0;
-  transition: ease-in, 0,7s ;
+  transition: ease-in, 0, 7s;
 }
 
 .header_container {
@@ -506,6 +505,28 @@ section {
   max-width: 462px;
   width: 100%;
   height: 480px;
+}
+.sec_loop {
+  overflow: hidden;
+  max-width: 1140px;
+}
+.icon_cont {
+  display: flex;
+  gap: 80px;
+  animation: slide 12s linear infinite;
+}
+
+.icon_cont img {
+  width: 100px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .Complex_img {
@@ -1324,7 +1345,7 @@ footer {
   height: 0px;
   transition: ease-in-out, 1s all;
 }
-.Fechtex1{
+.Fechtex1 {
   height: 200px;
   font-family: Work Sans;
   font-size: 20px;
@@ -1699,6 +1720,14 @@ footer {
   .result_image_cont {
     align-items: normal;
   }
+  .icon_loop {
+    display: none;
+  }
+  .icon_cont {
+    animation: none;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 750px) {
@@ -1749,9 +1778,6 @@ footer {
     top: 8%;
     left: 80%;
     z-index: 999999999999;
-
-  
-
   }
 }
 @media (max-width: 710px) {
@@ -1796,7 +1822,6 @@ footer {
   .review_heading {
     font-size: 40px;
   }
-  
 }
 @media (max-width: 540px) {
   .line_icon {
