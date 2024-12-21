@@ -393,7 +393,14 @@ section {
   color: #fff;
   border: none;
 }
-
+.company_case_box {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 .sec_list_div {
   display: flex;
   justify-content: space-evenly;
