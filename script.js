@@ -15,7 +15,7 @@ let burgerIcon = document.getElementById("burgerIcon");
 let burgerMenu = document.getElementById("burger_menu");
 let browseall1 = document.getElementById("browseall1");
 let sec_case2 = document.getElementById("sec_case2");
-
+let photo_cont = document.getElementById("case-container");
 
 let isAboutVisible = false;
 let isVisible = false;
@@ -24,9 +24,8 @@ CreatBtn.addEventListener("click", async (event) => {
   event.preventDefault();
 
   if (isVisible) {
-  
     Creatp.innerHTML = "";
-    Creatp.classList.remove("Fechtex1"); 
+    Creatp.classList.remove("Fechtex1");
     isVisible = false;
     CreatBtn.textContent = "Explore";
   } else {
@@ -34,12 +33,11 @@ CreatBtn.addEventListener("click", async (event) => {
       let box = await fetch(`https://fakestoreapi.com/products/1`);
       let result = await box.json();
 
-      
       if (!Creatp.querySelector("p")) {
         let p = document.createElement("p");
         p.textContent = result.description;
         Creatp.appendChild(p);
-        Creatp.classList.add("Fechtex1"); 
+        Creatp.classList.add("Fechtex1");
       }
 
       isVisible = true;
@@ -50,32 +48,30 @@ CreatBtn.addEventListener("click", async (event) => {
   }
 });
 
-
 // ეს ღილაკი მუშაობს რომ api და წამოიღოს 3 id ლისთისთვის
 
 aboutBtn.addEventListener("click", async (event) => {
   event.preventDefault();
 
   if (isAboutVisible) {
-    ulAdd.innerHTML = ""; 
-    ulAdd.classList.remove("Fechtex2"); 
+    ulAdd.innerHTML = "";
+    ulAdd.classList.remove("Fechtex2");
     isAboutVisible = false;
-    aboutBtn.textContent = "Explore"; 
+    aboutBtn.textContent = "Explore";
   } else {
     try {
       let response = await fetch(`https://fakestoreapi.com/products`);
       let result = await response.json();
 
-      
       result.slice(0, 3).forEach((item) => {
         let li = document.createElement("li");
         li.textContent = item.title;
         ulAdd.appendChild(li);
       });
 
-      ulAdd.classList.add("Fechtex2"); 
+      ulAdd.classList.add("Fechtex2");
       isAboutVisible = true;
-      aboutBtn.textContent = "Show less"; 
+      aboutBtn.textContent = "Show less";
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -90,24 +86,127 @@ burgerIcon.addEventListener("click", () => {
   line.classList.toggle("linerotate");
   lineTow.classList.toggle("linerotate2");
 });
-//////////////////////////////////////////////
+///////////////////////////////////////////////
+// make divs visible
 
-if (localStorage.getItem("newdivs2") === "true") {
-  sec_case2.classList.add("visible");
+let cases = [
+  {
+    image: "./images/case1.jpg",
+    title1: "Face of Mars",
+    title2: "Will be a rare experience",
+    num: "01",
+  },
+  {
+    image: "./images/case2.jpg",
+    title1: "Heavenly Bodies",
+    title2: "Tour round the world should form",
+    num: "02",
+  },
+  {
+    image: "./images/case7.avif",
+    title1: "Liberal Education",
+    title2: "Truly it was a great journey",
+    num: "03",
+  },
+  {
+    image: "./images/case4.jpg",
+    title1: "Though the Gravity",
+    title2: "Daily classes he no longer collapsed",
+    num: "04",
+  },
+  {
+    image: "./images/case5.jpg",
+    title1: "Face of Mars",
+    title2: "Will be a rare experience",
+    num: "05",
+  },
+  {
+    image: "./images/case6.jpg",
+    title1: "Heavenly Bodies",
+    title2: "Tour round the world should form",
+    num: "06",
+  },
+  {
+    image: "./images/case7.avif",
+    title1: "Liberal Education",
+    title2: "Truly it was a great journey",
+    num: "07",
+  },
+  {
+    image: "./images/case8.jpg",
+    title1: "Though the Gravity",
+    title2: "Daily classes he no longer collapsed",
+    num: "08",
+  },
+];
+
+function make_divs() {
+  let photo_massive = [];
+  for (let index = 0; index < cases.length; index += 2) {
+    photo_massive.push(cases.slice(index, index + 2));
+  }
+
+  photo_massive.forEach((group) => {
+    let casecontainer = document.createElement("div");
+    casecontainer.classList.add("case_box");
+
+    group.forEach((item) => {
+      let casebox = document.createElement("div");
+      casebox.classList.add("photo1");
+
+      let caseboxinner = document.createElement("div");
+      caseboxinner.classList.add("case1_box");
+
+      let img = document.createElement("img");
+      img.classList.add("case1");
+      img.src = item.image;
+
+      let numeration = document.createElement("div");
+      numeration.classList.add("green_numeration");
+
+      let numerationtext = document.createElement("p");
+      numerationtext.classList.add("numeration_paragraph");
+      numerationtext.textContent = item.num;
+
+      numeration.appendChild(numerationtext);
+
+      let paragraph = document.createElement("div");
+      paragraph.classList.add("case_paragraph");
+
+      let title1 = document.createElement("p");
+      title1.classList.add("case_paragraph1");
+      title1.textContent = item.title1;
+
+      let title2 = document.createElement("p");
+      title2.classList.add("case_paragraph2");
+      title2.textContent = item.title2;
+
+      paragraph.appendChild(title1);
+      paragraph.appendChild(title2);
+
+      caseboxinner.appendChild(img);
+      caseboxinner.appendChild(numeration);
+      casebox.appendChild(caseboxinner);
+      casebox.appendChild(paragraph);
+
+      casecontainer.appendChild(casebox);
+    });
+
+    photo_cont.appendChild(casecontainer);
+  });
 }
 
+make_divs();
+
 browseall1.addEventListener("click", () => {
-  if (sec_case2.classList.contains("visible")) {
-    sec_case2.classList.remove("visible");
-    localStorage.setItem("newdivs2", "false");
-    browseall1.style.marginTop = "-40px";
+  if (photo_cont.style.height === "1918px") {
+    photo_cont.style.height = "959px";
+    photo_cont.style.overflow = "hidden";
   } else {
-    sec_case2.classList.add("visible");
-    localStorage.setItem("newdivs2", "true");
-    browseall1.style.marginTop = "-250px";
+    photo_cont.style.height = "1918px";
+    photo_cont.style.overflow = "visible";
   }
 });
-
 
 // Email vallidation
 subscribe_button.addEventListener("click", (event) => {
@@ -124,23 +223,6 @@ subscribe_button.addEventListener("click", (event) => {
   }
 });
 
-// make divs visible
-if (localStorage.getItem("newdivs") === "true") {
-  insight_container.classList.add("visible");
-}
-
-browseall2.addEventListener("click", () => {
-  if (insight_container.classList.contains("visible")) {
-    insight_container.classList.remove("visible");
-    localStorage.setItem("newdivs", "false");
-  } else {
-    insight_container.classList.add("visible");
-    localStorage.setItem("newdivs", "true");
-  }
-});
-
-// make slider
-
 document.addEventListener("DOMContentLoaded", function () {
   var swiper1 = new Swiper(".mySwiper", {
     loop: true,
@@ -155,9 +237,79 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+////////////////////////////
+// getdivs from massive
 
+let insights = [
+  {
+    image: "./images/insight2.avif",
+    text: "Together, we turn ideas into impactful solutions and drive success forward.",
+  },
+  {
+    image: "./images/insight3.avif",
+    text: "Together, we create innovative solutions and achieve lasting success.",
+  },
+  {
+    image: "./images/insight4.avif",
+    text: "Collaboration drives our success, turning challenges into opportunities.",
+  },
+  {
+    image: "./images/insight5.avif",
+    text: "Our team's strength lies in unity and shared goals.",
+  },
+  {
+    image: "./images/insight6.avif",
+    text: "Together, we turn ideas into impactful solutions and success.",
+  },
+  {
+    image: "./images/insight7.avif",
+    text: "Through teamwork, we tackle challenges and create lasting impact.",
+  },
+];
 
+function makeinsightsdivs() {
+  let container = document.getElementById("insight-container");
 
+  let insightsmassive = [];
+  for (let index = 0; index < insights.length; index += 3) {
+    insightsmassive.push(insights.slice(index, index + 3));
+  }
 
+  insightsmassive.forEach((group) => {
+    let insightcontainer = document.createElement("div");
+    insightcontainer.classList.add("insight_container1");
 
+    group.forEach((item) => {
+      let insightbox = document.createElement("div");
+      insightbox.classList.add("insight_box2");
 
+      let img = document.createElement("img");
+      img.classList.add("insight_photo2");
+      img.src = item.image;
+
+      let paragraph = document.createElement("p");
+      paragraph.classList.add("insight_paragraph");
+      paragraph.textContent = item.text;
+
+      insightbox.appendChild(img);
+      insightbox.appendChild(paragraph);
+      insightcontainer.appendChild(insightbox);
+    });
+
+    container.appendChild(insightcontainer);
+  });
+}
+
+makeinsightsdivs();
+
+browseall2.addEventListener("click", () => {
+  let sectionInsight = document.getElementById("insight-container");
+
+  if (sectionInsight.style.height === "832px") {
+    sectionInsight.style.height = "442px";
+    sectionInsight.style.overflow = "hidden";
+  } else {
+    sectionInsight.style.height = "832px";
+    sectionInsight.style.overflow = "visible";
+  }
+});
