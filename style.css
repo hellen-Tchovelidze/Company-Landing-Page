@@ -42,10 +42,11 @@ header {
   background-color: black;
 }
 .linerotate {
-  transform: rotate(140deg);
+  transform: rotate(50deg);
 }
 .linerotate2 {
-  transform: rotate(58deg);
+  transform: rotate(130deg);
+  margin-top: -7px;
 }
 .burger_container {
   display: none;
