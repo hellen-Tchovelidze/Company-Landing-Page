@@ -42,10 +42,11 @@ header {
   background-color: black;
 }
 .linerotate {
-  transform: rotate(140deg);
+  transform: rotate(50deg);
 }
 .linerotate2 {
-  transform: rotate(58deg);
+  transform: rotate(130deg);
+  margin-top: -7px;
 }
 .burger_container {
   display: none;
@@ -363,6 +364,18 @@ section {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #333;
+  height: 0px;
+}
+.Fechtex2{
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #333;
+  height: 150px;
 }
 .sec_about_btn {
   width: 170px;
@@ -1348,7 +1361,7 @@ footer {
   transition: ease-in-out, 1s all;
 }
 .Fechtex1 {
-  height: 200px;
+  height: 150px;
   font-family: Work Sans;
   font-size: 20px;
   font-weight: 400;
