@@ -17,13 +17,17 @@ let burgerMenu = document.getElementById("burger_menu");
 let browseall1 = document.getElementById("browseall1");
 let sec_case2 = document.getElementById("sec_case2");
 
-let isVisible = false;
+
 let isAboutVisible = false;
+let isVisible = false;
+
 CreatBtn.addEventListener("click", async (event) => {
   event.preventDefault();
 
   if (isVisible) {
+  
     Creatp.innerHTML = "";
+    Creatp.classList.remove("Fechtex1"); 
     isVisible = false;
     CreatBtn.textContent = "Explore";
   } else {
@@ -31,40 +35,48 @@ CreatBtn.addEventListener("click", async (event) => {
       let box = await fetch(`https://fakestoreapi.com/products/1`);
       let result = await box.json();
 
-      let p = document.createElement("p");
-      p.textContent = result.description;
-      Creatp.appendChild(p);
-      Creatp.classList.toggle("Fechtex1");
+      
+      if (!Creatp.querySelector("p")) {
+        let p = document.createElement("p");
+        p.textContent = result.description;
+        Creatp.appendChild(p);
+        Creatp.classList.add("Fechtex1"); 
+      }
+
       isVisible = true;
-      CreatBtn.textContent = "up";
+      CreatBtn.textContent = "Up";
     } catch (error) {
       console.log("error");
     }
   }
 });
 
+
 // ეს ღილაკი მუშაობს რომ api და წამოიღოს 3 id ლისთისთვის
+
 aboutBtn.addEventListener("click", async (event) => {
   event.preventDefault();
 
   if (isAboutVisible) {
-    ulAdd.innerHTML = "";
+    ulAdd.innerHTML = ""; 
+    ulAdd.classList.remove("Fechtex2"); 
     isAboutVisible = false;
-    aboutBtn.textContent = "Explore";
+    aboutBtn.textContent = "Explore"; 
   } else {
     try {
       let response = await fetch(`https://fakestoreapi.com/products`);
       let result = await response.json();
 
+      
       result.slice(0, 3).forEach((item) => {
         let li = document.createElement("li");
         li.textContent = item.title;
         ulAdd.appendChild(li);
       });
 
-      // ulAdd.classList.toggle("li_js");
+      ulAdd.classList.add("Fechtex2"); 
       isAboutVisible = true;
-      aboutBtn.textContent = "show less";
+      aboutBtn.textContent = "Show less"; 
     } catch (error) {
       console.error("Error fetching data:", error);
     }
