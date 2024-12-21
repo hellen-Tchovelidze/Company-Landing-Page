@@ -1,6 +1,5 @@
 let insight_container = document.getElementById("insight_container");
 let browseall2 = document.getElementById("browseall2");
-
 let subscribe_button = document.getElementById("subscribe_button");
 let email = document.getElementById("email");
 let move_left = document.getElementById("move_left");
@@ -97,6 +96,7 @@ browseall1.addEventListener("click", () => {
   }
 });
 
+
 // Email vallidation
 subscribe_button.addEventListener("click", (event) => {
   event.preventDefault();
@@ -104,10 +104,11 @@ subscribe_button.addEventListener("click", (event) => {
   let email_validation = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
   if (email_validation.test(email_value)) {
     localStorage.setItem("userEmail", email_value);
-
-    email.remove();
+    alert("თქვენი იმეილი წარმატებით გაიგზავნა");
+    email.value = "";
   } else {
-    alert("Email is not correct");
+    alert("თქვენს მიერ შეყვანილი იმეილი არასწორია");
+    email.value = "";
   }
 });
 
@@ -141,6 +142,10 @@ document.addEventListener("DOMContentLoaded", function () {
     swiper1.slideNext();
   });
 });
+
+
+
+
 
 
 
