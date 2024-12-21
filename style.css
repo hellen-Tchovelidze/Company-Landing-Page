@@ -366,7 +366,7 @@ section {
   color: #333;
   height: 0px;
 }
-.Fechtex2{
+.Fechtex2 {
   font-family: Work Sans;
   font-size: 16px;
   font-weight: 400;
@@ -642,39 +642,36 @@ section {
 }
 /*  */
 
-
-.company_case_box {
+.sec_case_container1 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 22px;
-  margin-left: auto;
-  margin-right: auto;
+  height: 957px;
+  overflow: hidden;
+  transition: height 0.4s ease, overflow 0.4s ease;
+  gap: 10px;
 }
-.case_photo_box {
+
+.case_box {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
 }
+
 .photo1 {
   display: flex;
   flex-direction: column;
 }
+
 .case1_box {
   max-width: 570px;
   position: relative;
 }
+
 .case1 {
   width: 100%;
   height: 384px;
   border-radius: 8px;
-}
-.sec_case_photo_cont1 {
-  display: flex;
-  flex-direction: column;
-  gap: 56px;
 }
 
 .green_numeration {
@@ -688,16 +685,16 @@ section {
   justify-content: center;
   align-items: center;
 }
+
 .numeration_paragraph {
   color: #fff;
   text-align: center;
   font-family: "Hind Siliguri";
   font-size: 40px;
-  font-style: normal;
   font-weight: 700;
   line-height: 48px;
-  letter-spacing: -1px;
 }
+
 .case_paragraph {
   margin-top: 25px;
   display: flex;
@@ -706,36 +703,59 @@ section {
   flex-direction: column;
   gap: 2px;
 }
+
 .case_paragraph1 {
   color: #333;
   text-align: center;
   font-family: "Hind Siliguri";
   font-size: 24px;
-  font-style: normal;
   font-weight: 700;
   line-height: 32px;
 }
+
 .case_paragraph2 {
   color: rgba(51, 51, 51, 0.5);
   text-align: center;
   font-family: "Work Sans";
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 32px;
 }
+
+.sec_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.browseall {
+  width: 170px;
+  height: 48px;
+  border-radius: 6px;
+  border: 1px solid rgba(240, 117, 102, 0.24);
+  color: #f07566;
+  text-align: center;
+  font-family: "Hind Siliguri";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: -150px;
+  cursor: pointer;
+}
+
 #sec_case2 {
-  max-height: 0;
-  opacity: 0;
+  height: 442px;
   overflow: hidden;
-  transition: max-height 0.5s ease-out, opacity 0.3s ease-out;
-  padding: 0 15px;
+  transition: height 0.5s ease, overflow 0.9s ease;
 }
 
 #sec_case2.visible {
-  max-height: 1007px;
-  opacity: 1;
+  height: 832px;
+  overflow: visible;
 }
+
 .icon_photo {
   width: 155px;
   height: 42px;
@@ -1142,6 +1162,12 @@ section {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+.sec_insight_container1 {
+  flex-direction: column;
+  height: 442px;
+  overflow: hidden;
+  transition: height 0.5s ease, overflow 0.9s ease;
+}
 .insights_heading {
   color: #333;
   text-align: center;
@@ -1238,20 +1264,6 @@ section {
   font-style: normal;
   font-weight: 700;
   line-height: 32px;
-}
-#insight_container {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 1.3s ease, opacity 1.3s ease, transform 1.3s ease;
-  padding: 0 15px;
-  transform-origin: top;
-}
-
-#insight_container.visible {
-  max-height: 1374px;
-  opacity: 1;
-  padding: 15px;
 }
 
 .sec_button {
