@@ -1171,7 +1171,6 @@ section {
 }
 .sec_insight_container1 {
   flex-direction: column;
-  height: 442px;
   overflow: hidden;
   transition: height 0.5s ease, overflow 0.9s ease;
 }
@@ -1238,13 +1237,35 @@ section {
   font-weight: 400;
   line-height: 32px;
 }
-.insight_container1 {
+.insight_main_div_1 {
+  width: 100%;
   display: flex;
   margin-top: 32px;
   gap: 30px;
   justify-content: center;
   align-items: center;
 }
+.insight_main_div_2 {
+  width: 100%;
+  display: flex;
+  margin-top: 32px;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+
+  transition: height 0.4s ease, opacity 0.4s ease, overflow 0.4s ease;
+}
+
+.insight_main_div_2.visible {
+  height: 400px;
+  opacity: 1;
+  overflow: visible;
+}
+
 .insight_box2 {
   width: 370px;
   height: 384px;

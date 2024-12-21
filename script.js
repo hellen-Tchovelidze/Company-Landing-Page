@@ -239,7 +239,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 ////////////////////////////
 // getdivs from massive
-
 let insights = [
   {
     image: "./images/insight2.avif",
@@ -266,50 +265,88 @@ let insights = [
     text: "Through teamwork, we tackle challenges and create lasting impact.",
   },
 ];
-
-function makeinsightsdivs() {
+function make_insights_divs() {
   let container = document.getElementById("insight-container");
 
-  let insightsmassive = [];
-  for (let index = 0; index < insights.length; index += 3) {
-    insightsmassive.push(insights.slice(index, index + 3));
-  }
+  let first_group = insights.slice(0, 3);
+  let second_group = insights.slice(3, 6);
 
-  insightsmassive.forEach((group) => {
-    let insightcontainer = document.createElement("div");
-    insightcontainer.classList.add("insight_container1");
+  let first_Insight_container = document.createElement("div");
+  first_Insight_container.classList.add("insight_main_div_1");
 
-    group.forEach((item) => {
-      let insightbox = document.createElement("div");
-      insightbox.classList.add("insight_box2");
+  let second_Insight_container = document.createElement("div");
+  second_Insight_container.classList.add("insight_main_div_2");
 
-      let img = document.createElement("img");
-      img.classList.add("insight_photo2");
-      img.src = item.image;
+  first_group.forEach((item) => {
+    let insight_box = document.createElement("div");
+    insight_box.classList.add("insight_box2");
 
-      let paragraph = document.createElement("p");
-      paragraph.classList.add("insight_paragraph");
-      paragraph.textContent = item.text;
+    let img = document.createElement("img");
+    img.classList.add("insight_photo2");
+    img.src = item.image;
 
-      insightbox.appendChild(img);
-      insightbox.appendChild(paragraph);
-      insightcontainer.appendChild(insightbox);
-    });
+    let paragraph = document.createElement("p");
+    paragraph.classList.add("insight_paragraph");
+    paragraph.textContent = item.text;
 
-    container.appendChild(insightcontainer);
+    insight_box.appendChild(img);
+    insight_box.appendChild(paragraph);
+    first_Insight_container.appendChild(insight_box);
+  });
+
+  second_group.forEach((item) => {
+    let insight_box = document.createElement("div");
+    insight_box.classList.add("insight_box2");
+
+    let img = document.createElement("img");
+    img.classList.add("insight_photo2");
+    img.src = item.image;
+
+    let paragraph = document.createElement("p");
+    paragraph.classList.add("insight_paragraph");
+    paragraph.textContent = item.text;
+
+    insight_box.appendChild(img);
+    insight_box.appendChild(paragraph);
+    second_Insight_container.appendChild(insight_box);
+  });
+
+  container.appendChild(first_Insight_container);
+  container.appendChild(second_Insight_container);
+}
+
+make_insights_divs();
+
+function setVisibilityFromLocalStorage() {
+  let isVisible = localStorage.getItem("insightVisibility") === "true"; 
+  let insight_main_div_2 = document.querySelectorAll(".insight_main_div_2");
+
+  insight_main_div_2.forEach((element) => {
+    if (isVisible) {
+      element.classList.add("visible");
+    } else {
+      element.classList.remove("visible");
+    }
   });
 }
 
-makeinsightsdivs();
-
 browseall2.addEventListener("click", () => {
-  let sectionInsight = document.getElementById("insight-container");
+  let insight_main_div_2 = document.querySelectorAll(".insight_main_div_2");
 
-  if (sectionInsight.style.height === "832px") {
-    sectionInsight.style.height = "442px";
-    sectionInsight.style.overflow = "hidden";
-  } else {
-    sectionInsight.style.height = "832px";
-    sectionInsight.style.overflow = "visible";
-  }
+  let anyVisible = Array.from(insight_main_div_2).some((element) =>
+    element.classList.contains("visible")
+  );
+
+  insight_main_div_2.forEach((element) => {
+    if (anyVisible) {
+      element.classList.remove("visible");
+    } else {
+      element.classList.add("visible");
+    }
+  });
+
+  localStorage.setItem("insightVisibility", !anyVisible);
 });
+
+setVisibilityFromLocalStorage();
+
