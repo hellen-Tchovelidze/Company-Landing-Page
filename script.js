@@ -86,9 +86,8 @@ burgerIcon.addEventListener("click", () => {
   line.classList.toggle("linerotate");
   lineTow.classList.toggle("linerotate2");
 });
-///////////////////////////////////////////////
-// make divs visible
 
+// make_divs;
 let cases = [
   {
     image: "./images/case1.jpg",
@@ -140,73 +139,123 @@ let cases = [
   },
 ];
 
-function make_divs() {
-  let photo_massive = [];
-  for (let index = 0; index < cases.length; index += 2) {
-    photo_massive.push(cases.slice(index, index + 2));
-  }
+function create_case_box(item) {
+  let case_box = document.createElement("div");
+  case_box.classList.add("photo1");
 
-  photo_massive.forEach((group) => {
-    let casecontainer = document.createElement("div");
-    casecontainer.classList.add("case_box");
+  let case_box_inner = document.createElement("div");
+  case_box_inner.classList.add("case1_box");
 
-    group.forEach((item) => {
-      let casebox = document.createElement("div");
-      casebox.classList.add("photo1");
+  let img = document.createElement("img");
+  img.classList.add("case1");
+  img.src = item.image;
 
-      let caseboxinner = document.createElement("div");
-      caseboxinner.classList.add("case1_box");
+  let numeration = document.createElement("div");
+  numeration.classList.add("green_numeration");
 
-      let img = document.createElement("img");
-      img.classList.add("case1");
-      img.src = item.image;
+  let numeration_text = document.createElement("p");
+  numeration_text.classList.add("numeration_paragraph");
+  numeration_text.textContent = item.num;
 
-      let numeration = document.createElement("div");
-      numeration.classList.add("green_numeration");
+  numeration.appendChild(numeration_text);
 
-      let numerationtext = document.createElement("p");
-      numerationtext.classList.add("numeration_paragraph");
-      numerationtext.textContent = item.num;
+  let paragraph = document.createElement("div");
+  paragraph.classList.add("case_paragraph");
 
-      numeration.appendChild(numerationtext);
+  let title1 = document.createElement("p");
+  title1.classList.add("case_paragraph1");
+  title1.textContent = item.title1;
 
-      let paragraph = document.createElement("div");
-      paragraph.classList.add("case_paragraph");
+  let title2 = document.createElement("p");
+  title2.classList.add("case_paragraph2");
+  title2.textContent = item.title2;
 
-      let title1 = document.createElement("p");
-      title1.classList.add("case_paragraph1");
-      title1.textContent = item.title1;
+  paragraph.appendChild(title1);
+  paragraph.appendChild(title2);
 
-      let title2 = document.createElement("p");
-      title2.classList.add("case_paragraph2");
-      title2.textContent = item.title2;
+  case_box_inner.appendChild(img);
+  case_box_inner.appendChild(numeration);
+  case_box.appendChild(case_box_inner);
+  case_box.appendChild(paragraph);
 
-      paragraph.appendChild(title1);
-      paragraph.appendChild(title2);
-
-      caseboxinner.appendChild(img);
-      caseboxinner.appendChild(numeration);
-      casebox.appendChild(caseboxinner);
-      casebox.appendChild(paragraph);
-
-      casecontainer.appendChild(casebox);
-    });
-
-    photo_cont.appendChild(casecontainer);
-  });
+  return case_box;
 }
 
-make_divs();
+function create_case_containers() {
+  let container = document.getElementById("case_container");
 
-browseall1.addEventListener("click", () => {
-  if (photo_cont.style.height === "1918px") {
-    photo_cont.style.height = "959px";
-    photo_cont.style.overflow = "hidden";
+  let first_group = cases.slice(0, 4);
+  let second_group = cases.slice(4, 8);
+
+  let main_case_div_1 = document.createElement("div");
+  main_case_div_1.classList.add("main_case_div_1");
+
+  let sub_case_div_1_1 = document.createElement("div");
+  sub_case_div_1_1.classList.add("sub_case_div");
+  let sub_case_div_1_2 = document.createElement("div");
+  sub_case_div_1_2.classList.add("sub_case_div");
+
+  first_group.slice(0, 2).forEach((item) => {
+    let case_box = create_case_box(item);
+    sub_case_div_1_1.appendChild(case_box);
+  });
+  first_group.slice(2, 4).forEach((item) => {
+    let case_box = create_case_box(item);
+    sub_case_div_1_2.appendChild(case_box);
+  });
+
+  main_case_div_1.appendChild(sub_case_div_1_1);
+  main_case_div_1.appendChild(sub_case_div_1_2);
+
+  let main_case_div_2 = document.createElement("div");
+  main_case_div_2.classList.add("main_case_div_2");
+
+  let sub_case_div_2_1 = document.createElement("div");
+  sub_case_div_2_1.classList.add("sub_case_div");
+  let sub_case_div_2_2 = document.createElement("div");
+  sub_case_div_2_2.classList.add("sub_case_div");
+
+  second_group.slice(0, 2).forEach((item) => {
+    let case_box = create_case_box(item);
+    sub_case_div_2_1.appendChild(case_box);
+  });
+  second_group.slice(2, 4).forEach((item) => {
+    let case_box = create_case_box(item);
+    sub_case_div_2_2.appendChild(case_box);
+  });
+
+  main_case_div_2.appendChild(sub_case_div_2_1);
+  main_case_div_2.appendChild(sub_case_div_2_2);
+  container.appendChild(main_case_div_1);
+  container.appendChild(main_case_div_2);
+}
+
+create_case_containers();
+// click function and save in local storage
+browseall1.addEventListener("click", function() {
+  let main_case_div_2 = document.querySelector(".main_case_div_2");
+
+  main_case_div_2.classList.toggle("visible");
+
+  if (main_case_div_2.classList.contains("visible")) {
+    localStorage.setItem("main_case_div_2_visible", "true");
   } else {
-    photo_cont.style.height = "1918px";
-    photo_cont.style.overflow = "visible";
+    localStorage.setItem("main_case_div_2_visible", "false");
   }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  let main_case_div_2 = document.querySelector(".main_case_div_2");
+  
+  let savephotos = localStorage.getItem("main_case_div_2_visible");
+
+  if (savephotos === "true") {
+    main_case_div_2.classList.add("visible");
+  } else {
+    main_case_div_2.classList.remove("visible");
+  }
+});
+
 
 // Email vallidation
 subscribe_button.addEventListener("click", (event) => {
@@ -317,36 +366,30 @@ function make_insights_divs() {
 
 make_insights_divs();
 
-function setVisibilityFromLocalStorage() {
-  let isVisible = localStorage.getItem("insightVisibility") === "true"; 
-  let insight_main_div_2 = document.querySelectorAll(".insight_main_div_2");
+// // click function and save in local storage
 
-  insight_main_div_2.forEach((element) => {
-    if (isVisible) {
-      element.classList.add("visible");
-    } else {
-      element.classList.remove("visible");
-    }
-  });
-}
 
-browseall2.addEventListener("click", () => {
-  let insight_main_div_2 = document.querySelectorAll(".insight_main_div_2");
 
-  let anyVisible = Array.from(insight_main_div_2).some((element) =>
-    element.classList.contains("visible")
-  );
+browseall2.addEventListener("click", function() {
+  let insight_main_div_2 = document.querySelector(".insight_main_div_2");
 
-  insight_main_div_2.forEach((element) => {
-    if (anyVisible) {
-      element.classList.remove("visible");
-    } else {
-      element.classList.add("visible");
-    }
-  });
+  insight_main_div_2.classList.toggle("visible");
 
-  localStorage.setItem("insightVisibility", !anyVisible);
+  if (insight_main_div_2.classList.contains("visible")) {
+    localStorage.setItem("insight_main_div_2", "true");
+  } else {
+    localStorage.setItem("insight_main_div_2", "false");
+  }
 });
 
-setVisibilityFromLocalStorage();
+document.addEventListener("DOMContentLoaded", function() {
+  let insight_main_div_2 = document.querySelector(".insight_main_div_2");
+  
+  let saveinsights = localStorage.getItem("insight_main_div_2");
 
+  if (saveinsights === "true") {
+    insight_main_div_2.classList.add("visible");
+  } else {
+    insight_main_div_2.classList.remove("visible");
+  }
+});

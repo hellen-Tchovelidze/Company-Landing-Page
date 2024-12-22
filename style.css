@@ -652,12 +652,41 @@ section {
 .sec_case_container1 {
   display: flex;
   flex-direction: column;
-  height: 957px;
   overflow: hidden;
   transition: height 0.4s ease, overflow 0.4s ease;
   gap: 10px;
 }
+.main_case_div_1 {
+  display: flex;
+  gap: 30px;
+}
+.main_case_div_2 {
+  display: flex;
+  gap: 30px;
+}
+.main_case_div_2 {
+  max-width: 1140px;
+  display: flex;
+  margin-top: 32px;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  max-height: 0;
+  height: 0;
+  overflow: hidden;
+}
 
+.main_case_div_2.visible {
+  height: 100%;
+  max-height: 2030px;
+  overflow: visible;
+}
+
+.sub_case_div {
+  display: flex;
+  flex-direction: column;
+  gap: 53px;
+}
 .case_box {
   display: flex;
   justify-content: center;
@@ -1238,7 +1267,7 @@ section {
   line-height: 32px;
 }
 .insight_main_div_1 {
-  width: 100%;
+  max-width: 1140px;
   display: flex;
   margin-top: 32px;
   gap: 30px;
@@ -1246,23 +1275,20 @@ section {
   align-items: center;
 }
 .insight_main_div_2 {
-  width: 100%;
+  max-width: 1140px;
   display: flex;
   margin-top: 32px;
   gap: 30px;
   justify-content: center;
   align-items: center;
-
+  max-height: 0;
   height: 0;
   overflow: hidden;
-  opacity: 0;
-
-  transition: height 0.4s ease, opacity 0.4s ease, overflow 0.4s ease;
 }
 
 .insight_main_div_2.visible {
-  height: 400px;
-  opacity: 1;
+  height: 100%;
+  max-height: 1500px;
   overflow: visible;
 }
 
@@ -1561,6 +1587,12 @@ footer {
   .rocket_icon {
     right: 84%;
   }
+  .insight_main_div_1 {
+    flex-wrap: wrap;
+  }
+  .insight_main_div_2 {
+    flex-wrap: wrap;
+  }
 }
 @media (max-width: 920px) {
   .marketing_heading {
@@ -1787,6 +1819,14 @@ footer {
   }
   .icon_cont img {
     margin: 0;
+  }
+  .main_case_div_1 {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .main_case_div_2 {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
