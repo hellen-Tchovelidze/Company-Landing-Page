@@ -17,7 +17,6 @@ let burgerMenu = document.getElementById("burger_menu");
 let browseall1 = document.getElementById("browseall1");
 let sec_case2 = document.getElementById("sec_case2");
 
-
 let isAboutVisible = false;
 let isVisible = false;
 
@@ -25,9 +24,8 @@ CreatBtn.addEventListener("click", async (event) => {
   event.preventDefault();
 
   if (isVisible) {
-  
     Creatp.innerHTML = "";
-    Creatp.classList.remove("Fechtex1"); 
+    Creatp.classList.remove("Fechtex1");
     isVisible = false;
     CreatBtn.textContent = "Explore";
   } else {
@@ -35,12 +33,11 @@ CreatBtn.addEventListener("click", async (event) => {
       let box = await fetch(`https://fakestoreapi.com/products/1`);
       let result = await box.json();
 
-      
       if (!Creatp.querySelector("p")) {
         let p = document.createElement("p");
         p.textContent = result.description;
         Creatp.appendChild(p);
-        Creatp.classList.add("Fechtex1"); 
+        Creatp.classList.add("Fechtex1");
       }
 
       isVisible = true;
@@ -51,32 +48,30 @@ CreatBtn.addEventListener("click", async (event) => {
   }
 });
 
-
 // ეს ღილაკი მუშაობს რომ api და წამოიღოს 3 id ლისთისთვის
 
 aboutBtn.addEventListener("click", async (event) => {
   event.preventDefault();
 
   if (isAboutVisible) {
-    ulAdd.innerHTML = ""; 
-    ulAdd.classList.remove("Fechtex2"); 
+    ulAdd.innerHTML = "";
+    ulAdd.classList.remove("Fechtex2");
     isAboutVisible = false;
-    aboutBtn.textContent = "Explore"; 
+    aboutBtn.textContent = "Explore";
   } else {
     try {
       let response = await fetch(`https://fakestoreapi.com/products`);
       let result = await response.json();
 
-      
       result.slice(0, 3).forEach((item) => {
         let li = document.createElement("li");
         li.textContent = item.title;
         ulAdd.appendChild(li);
       });
 
-      ulAdd.classList.add("Fechtex2"); 
+      ulAdd.classList.add("Fechtex2");
       isAboutVisible = true;
-      aboutBtn.textContent = "Show less"; 
+      aboutBtn.textContent = "Show less";
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -154,5 +149,49 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+const swiper = new Swiper(".swiper-container", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: ".swiper_paginatio",
+    clickable: true, // პაგინაცია არის კლიკვადი
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    // ეკრანები 768px-ზე მეტი - 3 სლაიდი
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    // ეკრანები 480px-ზე მეტი - 2 სლაიდი
+    480: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    // მობილური მოწყობილობებისთვის - 1 სლაიდი
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+  },
+});
 
+//video
 
+let videoDiv = document.querySelector(".img_video");
+let videoContainer = document.getElementById("videoContainer");
+let videoPlayer = document.getElementById("videoPlayer");
+
+// ვიდეოს დასაწყებად
+videoDiv.addEventListener("click", () => {
+  videoContainer.classList.toggle("play_video");
+});
+
+// ვიდეოს დასრულების შემდეგ დამალვა
+videoPlayer.addEventListener("ended", function () {
+  videoContainer.classList.remove("play_video");
+});
