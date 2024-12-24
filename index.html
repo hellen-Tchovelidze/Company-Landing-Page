@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" /> -->
     <title>Document</title>
     <link
       rel="stylesheet"
@@ -13,7 +18,7 @@
   <body>
     <header>
       <div class="burger_container">
-        <h1 id="CMP" class="burger_cmp">CMP</h1>
+        <a href="" id="CMP" class="burger_cmp">CMP</a>
         <div>
           <button id="burgerIcon">
             <div class="line"></div>
@@ -65,7 +70,7 @@
           <h1 class="sec_creative_heading">
             Creative <br /><span class="green_tex">Marketing</span>
           </h1>
-          <img src="./images/Bitmap (2).png" alt="line" />
+          <img src="./images/Bitmap (2).png" alt="line" class="line_green" />
         </div>
 
         <p class="sec_creative_paragraph">
@@ -94,7 +99,7 @@
     </section>
     <section class="sec_about">
       <div>
-        <div class="photo_div">
+        <div class="photo_div" id="gray_phot">
           <img src="./images/icon (1).png" alt="icone" class="icone_beg" />
           <img src="./images/chart.png" alt="icone" class="done_icone" />
           <img
@@ -112,7 +117,7 @@
           </div>
         </div>
       </div>
-      <div>
+      <div class="about_sec_div_cl">
         <ul>
           <li class="ul_header">About</li>
         </ul>
@@ -284,6 +289,141 @@
             <img class="rocket_icon" src="./images/rocket.svg" alt="icon" />
           </div>
         </div>
+      </div>
+    </section>
+    <section class="video_sec">
+      <div>
+        <div class="img_video">
+          <img src="./images/puse_key.png" alt="" />
+        </div>
+        <div class="video_container" id="videoContainer">
+          <video id="videoPlayer" controls>
+            <source
+              src="./images/Business Professionals and Corporate Stock Video for project.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </div>
+
+      <div class="video_sec_div">
+        <h1 class="video_sec_heading">Strategy, technology <br />and design</h1>
+        <p class="video_sec_paragraph">
+          Apparently we had reached a great height in the atmosphere, for the
+          sky was a dead black.
+        </p>
+      </div>
+    </section>
+    <section class="swiper_sec">
+      <div class="swiper_sec_div">
+        <ul>
+          <li class="ul_header">Team</li>
+        </ul>
+        <h1 class="swiper_sec_heading">Strong Members</h1>
+        <p class="swiper_sec_tex">
+          Formed a great hindrance to my speed, I resolved, contrary to my first
+          intention, to make the <br />being of a gigantic stature that is to
+          say, about eight feet in height.
+        </p>
+      </div>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div>
+              <div class="swiper-img-wrapper">
+                <img
+                  src="./images/Ingo Schimpff.jpg"
+                  alt=""
+                  class="swiper-image"
+                />
+              </div>
+              <h1 class="swiper-name">Ingo Schimpff</h1>
+              <p class="swiper-role">Manager</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <div class="swiper-img-wrapper">
+                <img
+                  src="./images/Gauthier Drewitt.jfif"
+                  alt=""
+                  class="swiper-image"
+                />
+              </div>
+              <h1 class="swiper-name">Gauthier Drewitt</h1>
+              <p class="swiper-role">Director</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <div class="swiper-img-wrapper">
+                <img
+                  src="./images/Davis Cooper.jpg"
+                  alt=""
+                  class="swiper-image"
+                />
+              </div>
+              <h1 class="swiper-name">davis Cooper</h1>
+              <p class="swiper-role">Creator</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div>
+              <div class="swiper-img-wrapper">
+                <img
+                  src="./images/Winny Rearie.jpeg"
+                  alt=""
+                  class="swiper-image"
+                />
+              </div>
+              <h1 class="swiper-name">Winny Rearie</h1>
+              <p class="swiper-role">Manager</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <div class="swiper-img-wrapper">
+                <img
+                  src="./images/Olivia Smith.jpg"
+                  alt=""
+                  class="swiper-image"
+                />
+              </div>
+              <h1 class="swiper-name">Olivia Smith</h1>
+              <p class="swiper-role">Software Engineer</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <div class="swiper-img-wrapper">
+                <img
+                  src="./images/James Anderso.jpg"
+                  alt=""
+                  class="swiper-image"
+                />
+              </div>
+              <h1 class="swiper-name">James Anderso</h1>
+              <p class="swiper-role">Financial Analyst</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <div class="swiper-img-wrapper">
+                <img
+                  src="./images/Casey scott.jpg"
+                  alt=""
+                  class="swiper-image"
+                />
+              </div>
+              <h1 class="swiper-name">Casey scott</h1>
+              <p class="swiper-role">Head of Marketing Department</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper_paginatio"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
     </section>
 
@@ -458,6 +598,8 @@
         </div>
       </div>
     </footer>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="script.js"></script>
   </body>
