@@ -2256,6 +2256,7 @@ footer {
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     width: 60%;
+    height: 210px;
   }
   .Fechtex2 {
     font-family: Work Sans;
@@ -2266,6 +2267,7 @@ footer {
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     width: 60%;
+    height: 60%;
   }
 
   .brown_con {
